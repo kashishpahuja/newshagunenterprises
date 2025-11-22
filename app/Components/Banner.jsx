@@ -6,35 +6,21 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 
-export default function Banner() {
-
-  // Sample static banners (desktop + mobile + text)
+export default function HeroBanner() {
+  // 🎯 Your static banner array
   const banners = [
     {
-      desktopImage:
-        "https://images.unsplash.com/photo-1505699614946-1c4422bb6f67?auto=format&fit=crop&w=1600&q=80",
-      mobileImage:
-        "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=80",
-      title: "Save 25% on Tables",
-      subtitle: "Relax and enjoy premium designs for your home.",
+      desktopImage: "/Images/1.jpg", // desktop
+      mobileImage: "/Images/1.jpg",  // mobile
+      title: "Ergo Sofa Collection",
+      subtitle: "Relax, make yourself comfortable, and sink into your new favourite spot.",
       buttonLabel: "Shop Now",
     },
     {
-      desktopImage:
-        "https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?auto=format&fit=crop&w=1600&q=80",
-      mobileImage:
-        "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=80",
-      title: "Premium Chairs Collection",
-      subtitle: "Comfort and style crafted for modern living.",
-      buttonLabel: "Shop Now",
-    },
-    {
-      desktopImage:
-        "https://images.unsplash.com/photo-1616628182501-f8e9aee0d593?auto=format&fit=crop&w=1600&q=80",
-      mobileImage:
-        "https://images.unsplash.com/photo-1551298370-9d5dd0f6f081?auto=format&fit=crop&w=800&q=80",
-      title: "New Home Decor Arrivals",
-      subtitle: "Transform your space with minimal stylish decor.",
+      desktopImage: "/Images/2.jpg", // desktop
+      mobileImage: "/Images/2.jpg",  // mobile
+      title: "Modern Home Crafted",
+      subtitle: "Beautifully crafted furniture that elevates your living experience.",
       buttonLabel: "Shop Now",
     },
   ];
@@ -44,41 +30,54 @@ export default function Banner() {
       <Swiper
         modules={[Pagination, Autoplay, EffectFade]}
         effect="fade"
+        fadeEffect={{ crossFade: true }}
         pagination={{ clickable: true }}
         autoplay={{ delay: 5000, disableOnInteraction: false }}
-        loop={true}
-        className="w-full relative min-h-[300px] md:h-[650px]"
+        loop
+        className="w-full relative h-[300px] md:h-[700px]"
       >
         {banners.map((banner, index) => (
           <SwiperSlide key={index}>
             <div className="relative w-full h-full">
 
-              {/* MOBILE IMAGE */}
+              {/* 📱 Mobile Image */}
               <img
                 src={banner.mobileImage}
-                className="block lg:hidden w-full h-full object-cover"
                 alt="Mobile Banner"
+                className="block lg:hidden w-full h-full object-cover"
               />
 
-              {/* DESKTOP IMAGE */}
+              {/* 🖥 Desktop Image */}
               <img
                 src={banner.desktopImage}
-                className="hidden lg:block w-full h-full object-cover"
                 alt="Desktop Banner"
+                className="hidden lg:block w-full h-full object-cover"
               />
 
-              {/* ABSOLUTE TEXT CONTENT */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-                <h1 className="text-white text-3xl md:text-5xl font-light drop-shadow-lg">
+              {/* ⭐ Overlay Content */}
+              <div className="absolute inset-0 flex flex-col justify-center items-center px-6 md:px-16 bg-black/30">
+                <h2 className="text-white text-3xl md:text-5xl font-serif font-semibold drop-shadow-lg">
                   {banner.title}
-                </h1>
+                </h2>
 
-                <p className="text-white mt-3 text-lg md:text-xl font-light drop-shadow-lg">
+                <p className="text-white text-md md:text-xl mt-6 text-center drop-shadow-lg max-w-2xl">
                   {banner.subtitle}
                 </p>
 
-                <button className="mt-6 px-8 py-3 text-sm md:text-base bg-white text-black font-medium rounded-md shadow hover:bg-black hover:text-white transition-all">
-                  {banner.buttonLabel}
+                {/* ✨ Animated button from Uiverse */}
+                <button
+                  className="cursor-pointer mt-6 bg-white text-black 
+        px-6 py-3 
+                  font-medium group w-fit"
+                >
+                  <div className="relative overflow-hidden">
+                    <p className="flex items-center group-hover:-translate-y-7 duration-[1.125s] ease-[cubic-bezier(0.19,1,0.22,1)]">
+                      {banner.buttonLabel}
+                    </p>
+                    <p className="absolute top-7 left-0 group-hover:top-0 duration-[1.125s] ease-[cubic-bezier(0.19,1,0.22,1)]">
+                      {banner.buttonLabel}
+                    </p>
+                  </div>
                 </button>
               </div>
 

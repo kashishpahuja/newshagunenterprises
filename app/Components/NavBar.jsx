@@ -9,7 +9,7 @@ export default function NavBar() {
   return (
     <header className="w-full border-b bg-white sticky top-0 z-50">
      
-      <div className="text-center bg-[#796F51] text-white py-2 font-semibold text-sm md:text-xl">
+      <div className="text-center bg-[#796F51] text-white p-2 text-sm">
         Mix, match, and save up to ₹4000 on Summer-ready styles!
       </div>
 
@@ -24,7 +24,7 @@ export default function NavBar() {
 
        
         <Link href="/" className="text-2xl font-semibold tracking-widest">
-          FUNCHER SHOP
+          NOBEL SWIPE
         </Link>
         <div className="md:hidden">
 
