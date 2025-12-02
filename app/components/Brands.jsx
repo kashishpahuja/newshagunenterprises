@@ -15,71 +15,73 @@ const ProductCategory = () => {
         </p>
       </div>
 
-      {/* Manual 3–6–3 Grid */}
+      {/* Responsive Grid */}
       <div
-        className=" h-[400px] overflow-hidden
+        className="
           grid 
           grid-cols-1
-          sm:grid-cols-3
+          sm:grid-cols-2
           lg:grid-cols-12
           gap-6
         "
       >
 
-        {/* 1️⃣ First Item (col-span-3) */}
-        <div className="relative lg:col-span-3 cursor-pointer group  ">
-          <div className="absolute top-0  p-6 backdrop-blur-lg">
-            <h3 className="text-lg font-semibold capitalize tracking-wide text-[#B67032]">
+        {/* 1️⃣ Left — Nilkamal Plastic Chair */}
+        <div className="relative lg:col-span-3 cursor-pointer group overflow-hidden rounded-xl shadow-lg">
+
+          {/* Text Overlay */}
+          <div className="absolute top-0 left-0 p-6 z-20 backdrop-blur-md bg-white/40 rounded-br-xl">
+            <h3 className="text-lg font-semibold tracking-wide text-[#B67032]">
               Nilkamal
             </h3>
-            <p className="text-sm text-stone-600 mt-1">Modern Dining Chairs</p>
+            <p className="text-sm text-stone-700">Modern Plastic Chairs</p>
           </div>
 
-          <div className="w-full h-auto object-contain relative overflow-hidden  shadow">
- <img
-  src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=3000&q=80"
-  alt="Nilkamal"
-  className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
-/>
-
-          </div>
+          {/* Image */}
+          <img
+            src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=2000&q=80"
+            alt="Nilkamal"
+            className="w-full h-64 sm:h-80 lg:h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
         </div>
 
-        {/* 2️⃣ Middle Item (col-span-6) */}
-        <div className=" relative lg:col-span-6 cursor-pointer group">
-          <div className="absolute top-0  p-6 z-50 w-full backdrop-blur-lg">
-            <h3 className="text-lg font-semibold capitalize tracking-wide text-white">
+        {/* 2️⃣ Center — Premium Plastic Chair Set */}
+        <div className="relative lg:col-span-5 cursor-pointer group overflow-hidden rounded-xl shadow-lg">
+
+          {/* Text Overlay */}
+          <div className="absolute top-0 left-0 p-6 z-20 backdrop-blur-md bg-black/40 rounded-br-xl w-fit">
+            <h3 className="text-lg font-semibold tracking-wide text-white">
               Radha Gold
             </h3>
-            <p className="text-sm text-stone-300 mt-1">Premium Wooden Tables</p>
+            <p className="text-sm text-stone-200">Premium Chair Collection</p>
           </div>
 
-          <div className="w-full h-auto object-contain relative overflow-hidden  shadow">
+          {/* Image */}
 <img
-  src="https://images.unsplash.com/photo-1494059980473-813e73ee784b?ixid=M3wxMjA3fDB8MXxzZWFyY2h8Mnx8YXJtY2hhaXJ8ZW58MHx8fHwxNzM0MTM1MzQzfA&ixlib=rb-4.0.3&w=1000&q=80"
+  src="https://images.unsplash.com/photo-1565791380713-1756b9a05343?fm=jpg&q=60&w=3000"
   alt="Radha Gold"
-  className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
+  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
 />
 
-          </div>
         </div>
 
-        {/* 3️⃣ Third Item (col-span-3) */}
-        <div className="  bg-[#d8d3d393] lg:col-span-3 cursor-pointer group">
-          <div className=" p-6">
-            <h3 className="text-lg font-semibold capitalize tracking-wide text-[#B67032]">
+        {/* 3️⃣ Right — Elegant Chairs */}
+        <div className="relative lg:col-span-4 cursor-pointer group overflow-hidden rounded-xl shadow-lg">
+
+          {/* Text Overlay */}
+          <div className="absolute top-0 left-0 p-6 z-20 backdrop-blur-md bg-white/40 rounded-br-xl">
+            <h3 className="text-lg font-semibold tracking-wide text-[#B67032]">
               Muraj
             </h3>
-            <p className="text-sm text-stone-600 mt-1">Elegant Sofa Collection</p>
+            <p className="text-sm text-stone-700">Elegant Chair Collection</p>
           </div>
 
-          <div className="w-full h-auto object-contain relative overflow-hidden  shadow">
-            <img
-              src="https://images.unsplash.com/photo-1512212621149-107ffe572d2f?fm=jpg&q=60&w=3000"
-              alt="Muraj"
-              className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
-            />
-          </div>
+          {/* Image */}
+          <img
+            src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=2000&q=80"
+            alt="Muraj Chairs"
+            className="w-full h-64 sm:h-80 lg:h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
         </div>
 
       </div>
