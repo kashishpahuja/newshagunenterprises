@@ -27,45 +27,47 @@ const ProductCategory = () => {
       >
 
         {/* 1️⃣ First Item (col-span-3) */}
-        <div className="lg:col-span-3 cursor-pointer group bg-[#d8d3d393] ">
-          <div className=" p-6">
-            <h3 className="text-lg font-semibold uppercase tracking-wide text-[#B67032]">
+        <div className="relative lg:col-span-3 cursor-pointer group  ">
+          <div className="absolute top-0  p-6 backdrop-blur-lg">
+            <h3 className="text-lg font-semibold capitalize tracking-wide text-[#B67032]">
               Nilkamal
             </h3>
             <p className="text-sm text-stone-600 mt-1">Modern Dining Chairs</p>
           </div>
 
           <div className="w-full h-auto object-contain relative overflow-hidden  shadow">
-            <img
-              src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?fm=jpg&q=60&w=3000"
-              alt="Nilkamal"
-              className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
-            />
+ <img
+  src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=3000&q=80"
+  alt="Nilkamal"
+  className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
+/>
+
           </div>
         </div>
 
         {/* 2️⃣ Middle Item (col-span-6) */}
-        <div className=" bg-[#d8d3d393] lg:col-span-6 cursor-pointer group">
-          <div className=" p-6">
-            <h3 className="text-lg font-semibold uppercase tracking-wide text-[#B67032]">
+        <div className=" relative lg:col-span-6 cursor-pointer group">
+          <div className="absolute top-0  p-6 z-50 w-full backdrop-blur-lg">
+            <h3 className="text-lg font-semibold capitalize tracking-wide text-white">
               Radha Gold
             </h3>
-            <p className="text-sm text-stone-600 mt-1">Premium Wooden Tables</p>
+            <p className="text-sm text-stone-300 mt-1">Premium Wooden Tables</p>
           </div>
 
           <div className="w-full h-auto object-contain relative overflow-hidden  shadow">
-            <img
-              src="https://images.unsplash.com/photo-1565791380713-1756b9a05343?fm=jpg&q=60&w=3000"
-              alt="Radha Gold"
-              className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
-            />
+<img
+  src="https://images.unsplash.com/photo-1494059980473-813e73ee784b?ixid=M3wxMjA3fDB8MXxzZWFyY2h8Mnx8YXJtY2hhaXJ8ZW58MHx8fHwxNzM0MTM1MzQzfA&ixlib=rb-4.0.3&w=1000&q=80"
+  alt="Radha Gold"
+  className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
+/>
+
           </div>
         </div>
 
         {/* 3️⃣ Third Item (col-span-3) */}
         <div className="  bg-[#d8d3d393] lg:col-span-3 cursor-pointer group">
           <div className=" p-6">
-            <h3 className="text-lg font-semibold uppercase tracking-wide text-[#B67032]">
+            <h3 className="text-lg font-semibold capitalize tracking-wide text-[#B67032]">
               Muraj
             </h3>
             <p className="text-sm text-stone-600 mt-1">Elegant Sofa Collection</p>
